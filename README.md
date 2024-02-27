@@ -1,14 +1,13 @@
 This is a project that analyzes customer segmentation by RFM metrics and gives recommendations for each group of customer segmentation.
-**1. RFM metrics:**
+1. RFM metrics:
 - Recency: The freshness of the customer activity, be it purchases or visits.
 E.g. Time since the last order or last engagement with the product.
 - Frequency: The frequency of customer transactions or visits.
 Eg. The total number of transactions or average time between transactions engaged visits.
 - Monetary: The intention of customers to spend or purchasing power of customers.
 E.g. Total or average transaction value.
-**2. Code:**
--- -- -- -- -- -- -- RFM Calculate -- -- -- -- -- -- -- 
-WITH RFM_Base AS
+2. Code:
++ WITH RFM_Base AS
 (
 SELECT b.Customer_Name,
     DATEDIFF(DAY, MAX(a.Order_Date), CONVERT(DATE, GETDATE())) AS Recency_Value,
@@ -18,7 +17,6 @@ FROM sales AS a
 INNER JOIN customers AS b ON a.Customer_ID = b.Customer_ID
 GROUP BY b.Customer_Name
 )
--- SELECT * FROM RFM_Base
 , RFM_Score 
 AS
 (
@@ -28,7 +26,6 @@ AS
     NTILE(5) OVER (ORDER BY Monetary_Value ASC) as M_Score
   FROM RFM_Base
 )
--- SELECT * FROM RFM_Score
 , RFM_Final
 AS
 (
@@ -42,8 +39,7 @@ FROM RFM_Final f
 JOIN segment_scores s ON f.RFM_Overall = s.Scores
 ORDER BY Recency_Value
 ; 
--- -- -- -- -- -- -- Done -- -- -- -- -- -- --
-**3. Results:**
+3. Results:
 As a result, we have 11 segmentations as below:
 - Champions: people who bought recently, bought often, and spent the most - **10.20% of the total**
 - Loyal Customers: people who spend good money with us often. Responsive to promotions - **9.83% of the total**
@@ -56,7 +52,7 @@ As a result, we have 11 segmentations as below:
 - Can't Lose Them: people who made the biggest purchases, and often. But haven't returned for a long time - **2.49% of the total**
 - Hibernating: The last purchase was long back, with low spenders and a low number of orders - **13.56% of the total**
 - Lost: people who have the lowest recency, frequency, and monetary scores - **8.96% of the total**
-  **4. Recommendations for each group of customer segmentation:**
+4. Recommendations for each group of customer segmentation:
 - Champions: Reward them. Can be early adopters of new products. Will promote your brand.
 - Loyal Customers: Upsell higher-value products. Ask for reviews. Engage them.
 - Potential Loyalist: Offer membership/ loyalty program, recommend other products
