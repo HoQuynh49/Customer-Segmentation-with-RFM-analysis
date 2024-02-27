@@ -45,18 +45,17 @@ ORDER BY Recency_Value
 -- -- -- -- -- -- -- Done -- -- -- -- -- -- --
 **3. Results:**
 As a result, we have 11 segmentations as below:
-
-- Champions: people who bought recently, bought often, and spent the most!
-- Loyal Customers: people who spend good money with us often. Responsive to promotions.
-- Potential Loyalists: people who are recent customers, but spent a good amount and bought more than once.
-- Recent Customers: people who bought most recently, but not often.
-- Promising: people who are recent shoppers, but haven't spent much.
-- Customers Needing Attention: people who have above-average recency, frequency, and monetary values. May not have bought it very recently though.
-- About To Sleep: people who have below-average recency, frequency, and monetary values. Will lose them if not reactivated.
-- At Risk: people who spend big money and purchase often. But a long time ago. Need to bring them back.
-- Can't Lose Them: people who made the biggest purchases, and often. But haven't returned for a long time.
-- Hibernating: The last purchase was long back, with low spenders and a low number of orders.
-- Lost: people who have the lowest recency, frequency, and monetary scores.
+- Champions: people who bought recently, bought often, and spent the most - **10.20% of the total**
+- Loyal Customers: people who spend good money with us often. Responsive to promotions - **9.83% of the total**
+- Potential Loyalists: people who are recent customers, but spent a good amount and bought more than once - **14.18% of the total**
+- New Customers: people who bought most recently, but not often - **6.09% of the total**
+- Promising: people who are recent shoppers, but haven't spent much - **7.59% of the total**
+- Customers Needing Attention: people who have above-average recency, frequency, and monetary values. May not have bought it very recently though - **7.84% of the total**
+- About To Sleep: people who have below-average recency, frequency, and monetary values. Will lose them if not reactivated - **4.73% of the total**
+- At Risk: people who spend big money and purchase often. But a long time ago. Need to bring them back - **14.55% of the total**
+- Can't Lose Them: people who made the biggest purchases, and often. But haven't returned for a long time - **2.49% of the total**
+- Hibernating: The last purchase was long back, with low spenders and a low number of orders - **13.56% of the total**
+- Lost: people who have the lowest recency, frequency, and monetary scores - **8.96% of the total**
   **4. Recommendations for each group of customer segmentation:**
 - Champions: Reward them. Can be early adopters of new products. Will promote your brand.
 - Loyal Customers: Upsell higher-value products. Ask for reviews. Engage them.
